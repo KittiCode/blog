@@ -1,0 +1,6 @@
+%h1 #{@post.title}
+submited
+%b
+	= time_ago_in_words(@post.created_at)
+ago
+%p #{@post.content}
