@@ -1,5 +1,6 @@
 - @posts.each do |post|
 	.post_wrapper
+		=image_tag post.image.url(:thumb)
 		%h2{class: "title"}
 			= link_to post.title, post
 		%p{class: "date"}
@@ -7,5 +8,7 @@
 		created by
 		%b= post.user.email
 		- if post.user == current_user
+			%br
 			= link_to 'Edit', edit_post_path(post)
+			|
 			= link_to 'Delete', post_path(post), method: 'delete'
