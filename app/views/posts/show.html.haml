@@ -5,7 +5,7 @@
 	%b{class: "date"}
 		= time_ago_in_words(@post.created_at)
 	ago 
-	- if user_signed_in?
+	- if @post.user == current_user
 		|
 		= link_to 'Edit', edit_post_path(@post)
 		|
