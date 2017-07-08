@@ -11,3 +11,13 @@
 	= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Are you sure?"}
 	%p{class: "body"} 
 		=@post.content
+
+	
+	#comments
+		%h2
+			= @post.comments.count
+			Comments
+		= render @post.comments
+
+		%h3 Add a comment:
+		= render "comments/form"
