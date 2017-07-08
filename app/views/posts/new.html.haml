@@ -1,11 +1,14 @@
-%h1 
-	New Post
-=form_for :post, url: posts_path do |f|
-	%p
-		=f.label :title 
-		=f.text_field :title
-	%p
-		=f.label :content
-		=f.text_field :content
-	%p
-		=f.submit
+#page_wrapper
+	%h1 
+		New Post
+	=form_for :post, url: posts_path do |f|
+		%p
+			=f.label :title 
+			%br
+			=f.text_field :title
+		%p
+			=f.label :content
+			%br
+			=f.text_area :content
+		%p
+			=f.submit

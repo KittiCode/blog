@@ -1,8 +1,9 @@
-%h1{class: "title"}
-	=@post.title
-submited
-%b{class: "date"}
-	= time_ago_in_words(@post.created_at)
-ago
-%p{class: "body"} 
-	=@post.content
+#post_content
+	%h1{class: "title"}
+		=@post.title
+	submited
+	%b{class: "date"}
+		= time_ago_in_words(@post.created_at)
+	ago
+	%p{class: "body"} 
+		=@post.content
